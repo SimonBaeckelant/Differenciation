@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Différenciation en Sciences</title>
+
+    <!-- TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Animation on Scroll -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Polices -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Nunito:wght@400;600&display=swap"
+        rel="stylesheet">
+
+
+    <!-- Styles personnalisés -->
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: #f6f5f2;
+            color: #2d2d2d;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Merriweather', serif;
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #355e3b;
+            border-bottom: 2px solid #b6d3b0;
+            padding-bottom: 0.3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #487d56;
+            margin-top: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .section-block {
+            background: #eef3ea;
+            border-left: 4px solid #9bc6a3;
+            padding: 1.2rem 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 0.75rem;
+        }
+
+        .section-block p {
+            margin: 0.8rem 0;
+            line-height: 1.7;
+        }
+
+        ul,
+        ol {
+            padding-left: 1.2rem;
+            margin-top: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        ul li::marker,
+        ol li::marker {
+            color: #679267;
+        }
+
+        ul li,
+        ol li {
+            margin-bottom: 0.5rem;
+        }
+
+        nav button {
+            color: #355e3b;
+            font-weight: 600;
+            padding: 0.5rem 0.8rem;
+            border-radius: 0.3rem;
+            transition: background 0.3s;
+        }
+
+        nav button:hover {
+            background: #dfeee0;
+        }
+
+        .bg-white {
+            background-color: #fdfdfb;
+        }
+
+        a {
+            color: #2d6a4f;
+            text-decoration: underline;
+        }
+
+        a:hover {
+            color: #1c4532;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header class="bg-white shadow-md sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex flex-wrap items-center justify-between gap-4">
+            <h1 class="text-2xl font-bold text-primary whitespace-nowrap">📘 Différencier en sciences</h1>
+            <nav class="flex flex-wrap justify-center gap-4 text-sm">
+                <button onclick="showTab('qui')">Qui sommes-nous ?</button>
+                <button onclick="showTab('presentation')">Présentation</button>
+                <button onclick="showTab('abstraction')">Abstraction</button>
+                <button onclick="showTab('differenciation')">Différenciation</button>
+                <button onclick="showTab('scenario')">Scénario</button>
+                <button onclick="showTab('ressources')">Ressources</button>
+                <button onclick="showTab('biblio')">Bibliographie</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-4 py-8 space-y-10">
+        <section id="qui" class="tab-content active" data-aos="fade-up">
+            <h2 class="text-3xl font-semibold mb-6 text-primary border-b-4 border-primary pb-2">Qui sommes-nous ?</h2>
+            <div class="bg-white rounded-xl shadow-md p-6 flex flex-col md:flex-row gap-6">
+
+                <!-- Simon -->
+                <div class="flex-1 text-center space-y-4">
+                    <img src="simon.jpg" alt="Simon Baeckelant"
+                        class="mx-auto rounded-full w-32 h-32 object-cover shadow-lg border-4 border-primary">
+                    <h3 class="text-xl font-bold text-primary">Simon Baeckelant</h3>
+                    <p class="text-gray-700 text-sm leading-relaxed">
+                        Âgé de 24 ans, je suis professeur de mathématiques et de programmation, passionné par
+                        l’innovation pédagogique.
+                        J’aime concevoir des séquences d’enseignement en m’appuyant sur les technologies émergentes,
+                        notamment l’intelligence artificielle.
+                        Mon objectif : rendre les sciences plus accessibles et plus concrètes pour tous les élèves.
+                    </p>
+                </div>
+
+                <!-- Diane -->
+                <div class="flex-1 text-center space-y-4">
+                    <img src="diane.jpg" alt="Diane Dufaux"
+                        class="mx-auto rounded-full w-32 h-32 object-cover shadow-lg border-4 border-primary">
+                    <h3 class="text-xl font-bold text-primary">Diane Dufaux</h3>
+                    <p class="text-gray-700 text-sm leading-relaxed italic">
+                        (Présentation à venir)
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="presentation" class="tab-content" data-aos="fade-up">
+            <h2 class="text-3xl font-semibold mb-4">Présentation</h2>
+            <div class="bg-white p-6 rounded-xl shadow-sm space-y-6">
+                <div class="section-block">
+                    <h3 class="text-xl font-semibold">Problématique</h3>
+                    <p>Dans les cours de sciences, l’abstraction est omniprésente. Elle permet d’appréhender des
+                        phénomènes invisibles, complexes ou microscopiques tels que la structure de la matière, les
+                        réactions chimiques ou encore les interactions énergétiques. Cependant, cette abstraction
+                        cognitive constitue un véritable obstacle pour une part significative des élèves. En
+                        particulier, ceux présentant un profil cognitif plus concret, des troubles spécifiques de
+                        l’apprentissage (TSA, TDAH, dyspraxie, dyscalculie…) ou encore des déficits dans la
+                        visualisation mentale rencontrent des difficultés pour conceptualiser ces notions. Ces élèves
+                        éprouvent souvent un sentiment d’échec ou de déconnexion vis-à-vis du savoir scientifique, ce
+                        qui peut engendrer un désintérêt, voire un rejet de la discipline. Dès lors, il est essentiel de
+                        repenser les modalités d’enseignement pour lever ces obstacles et rendre l’apprentissage
+                        accessible à tous.</p>
+                </div>
+                <div class="section-block">
+                    <h3 class="text-xl font-semibold">Objectifs pédagogiques</h3>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li>Identifier les concepts scientifiques susceptibles de poser des difficultés d’abstraction.
+                        </li>
+                        <li>Utiliser des outils numériques et de visualisation (simulations, modélisations, réalité
+                            augmentée) pour soutenir la compréhension.</li>
+                        <li>Mettre en place des parcours différenciés adaptés aux profils cognitifs des élèves.</li>
+                        <li>Favoriser l’autonomie grâce à des environnements d’apprentissage personnalisés, notamment
+                            via des dispositifs d’intelligence artificielle.</li>
+                        <li>Évaluer l’efficacité de ces dispositifs dans l’appropriation des savoirs scientifiques.</li>
+                    </ul>
+                </div>
+                <div class="section-block">
+                    <h3 class="text-xl font-semibold">Public cible</h3>
+                    <p>Le dispositif est destiné principalement aux enseignants du premier degré de l’enseignement
+                        secondaire, ainsi qu’à leurs élèves. Il cible en particulier les classes hétérogènes où
+                        coexistent des élèves aux profils variés, dont certains présentent des besoins spécifiques
+                        (élèves en situation de handicap, allophones, élèves à haut potentiel ou en grande difficulté
+                        scolaire). En plaçant la différenciation et la personnalisation au cœur de la démarche, le
+                        projet ambitionne de proposer des pistes concrètes, transférables et soutenues par des outils
+                        numériques actuels.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="abstraction" class="tab-content" data-aos="fade-up">
+            <h2 class="text-3xl font-semibold mb-4">L'abstraction au cours de sciences</h2>
+            <div class="bg-white p-6 rounded-xl shadow-sm space-y-6">
+                <p>Dans les cours de sciences, l’abstraction est au cœur des apprentissages : elle permet de
+                    conceptualiser des phénomènes qui ne sont pas directement observables, comme les interactions
+                    moléculaires, les champs de forces, ou encore les équilibres chimiques. Pour apprendre, les élèves
+                    doivent développer des représentations mentales d’objets, de relations ou de processus invisibles,
+                    et les manipuler intellectuellement.</p>
+
+                <p>Mais pour de nombreux élèves, ce processus est particulièrement difficile. Ceux qui présentent un
+                    profil cognitif plus concret, ainsi que ceux atteints de troubles d’apprentissage tels que la
+                    dyspraxie, la dyscalculie ou le TDAH, peinent à s’approprier ces notions. Ces difficultés se
+                    manifestent par :</p>
+
+                <ul class="list-disc list-inside space-y-1">
+                    <li>une incapacité à créer des images mentales de phénomènes abstraits, comme le déplacement des
+                        électrons autour du noyau atomique ;</li>
+                    <li>une difficulté à transférer les connaissances théoriques dans des contextes concrets ou
+                        expérimentaux ;</li>
+                    <li>une mémorisation mécanique de formules sans compréhension profonde des principes sous-jacents.
+                    </li>
+                </ul>
+
+                <p>Ces obstacles cognitifs peuvent engendrer une démotivation importante, voire un sentiment d’exclusion
+                    face aux savoirs scientifiques. Ils nuisent à l’appropriation durable des concepts, et rendent
+                    difficile leur mobilisation dans d’autres contextes d’apprentissage.</p>
+
+                <p>C’est pourquoi il est essentiel d’accompagner les élèves à l’aide de supports variés, concrets et
+                    visuels. Les schémas explicatifs, les animations interactives, les simulations numériques ou les
+                    environnements en réalité augmentée sont autant d’outils qui permettent de rendre visibles les
+                    mécanismes invisibles. Ils facilitent la compréhension, allègent la charge cognitive et favorisent
+                    la construction de représentations internes stables.</p>
+
+                <p>Enfin, la manière d’introduire les concepts joue un rôle crucial. Une progression qui part d’une
+                    situation observable, passe par l’expérimentation, puis mène progressivement à la formalisation
+                    abstraite semble plus adaptée à un public hétérogène. Cette démarche inductive permet à chaque élève
+                    de construire du sens à son rythme.</p>
+            </div>
+        </section>
+
+        <section id="differenciation" class="tab-content" data-aos="fade-up">
+            <h2 class="text-3xl font-semibold mb-4">La différenciation</h2>
+            <div class="bg-white p-6 rounded-xl shadow-sm space-y-6">
+                <p>La différenciation pédagogique consiste à adapter les pratiques d’enseignement en fonction des
+                    besoins, des intérêts et des profils cognitifs des élèves. Elle repose sur un constat simple : tous
+                    les apprenants n’évoluent pas au même rythme, n’ont pas les mêmes acquis, ni les mêmes façons
+                    d’entrer dans les savoirs.</p>
+
+                <p>Dans le contexte spécifique des sciences, cette hétérogénéité s’exprime fortement, notamment face aux
+                    concepts abstraits. Certains élèves auront besoin d’un appui visuel fort, d’autres d’une
+                    manipulation concrète, tandis que certains pourront accéder directement à une modélisation
+                    mathématique. Il devient alors indispensable de proposer des itinéraires d’apprentissage variés et
+                    flexibles.</p>
+
+                <p>Selon les travaux de Tomlinson (2000), la différenciation peut porter sur quatre éléments :</p>
+                <ul class="list-disc list-inside space-y-1">
+                    <li><strong>Le contenu</strong> : proposer des ressources différentes selon le niveau ou les besoins
+                        (textes simplifiés, vidéos, simulations, etc.).</li>
+                    <li><strong>Le processus</strong> : offrir des modes de traitement variés (recherche, manipulation,
+                        tutorat, etc.).</li>
+                    <li><strong>Le produit</strong> : autoriser plusieurs formes de restitution (carte mentale, poster,
+                        exposé, QCM, etc.).</li>
+                    <li><strong>L’environnement</strong> : aménager la classe pour permettre des rythmes ou postures
+                        d’apprentissage variées.</li>
+                </ul>
+
+                <p>La différenciation s’appuie sur des diagnostics précis : à travers des évaluations initiales, des
+                    observations en classe ou des outils numériques (comme ceux intégrant l’IA), il est possible
+                    d’identifier les besoins de chaque élève et d’y répondre de manière ciblée.</p>
+
+                <p>Les outils numériques jouent ici un rôle fondamental. Des plateformes comme Khan Academy ou des
+                    simulateurs comme PhET permettent une personnalisation fine : exercices adaptés, feedback immédiat,
+                    visualisations interactives... L’enseignant peut aussi s’appuyer sur des dispositifs d’IA générative
+                    pour créer à la volée des supports différenciés en fonction d’un niveau, d’une compétence ou d’un
+                    style d’apprentissage.</p>
+
+                <p>En intégrant la différenciation comme principe fondateur du dispositif pédagogique, il ne s’agit pas
+                    seulement de compenser les difficultés mais bien de valoriser chaque profil. Elle ouvre la voie à
+                    une pédagogie plus inclusive, équitable et motivante.</p>
+            </div>
+        </section>
+
+
+        <section id="scenario" class="tab-content" data-aos="fade-up">
+            <h2 class="text-3xl font-semibold mb-4">Scénario pédagogique</h2>
+            <div class="bg-white p-6 rounded-xl shadow-sm space-y-6">
+                <div class="section-block">
+                    <h3 class="text-xl font-semibold">Contexte</h3>
+                    <p>Ce scénario pédagogique est conçu pour une classe de 1<sup>re</sup> secondaire dans le cadre du
+                        cours de sciences. Il porte sur la compréhension des états de la matière et de leurs transitions
+                        (solide, liquide, gaz), mais aborde cette thématique par le prisme de la modélisation
+                        moléculaire. L’objectif est d’aider les élèves à dépasser une vision purement sensorielle ou
+                        descriptive, pour accéder à une conceptualisation scientifique reposant sur la représentation
+                        abstraite des particules de matière.</p>
+
+                    <p>Le groupe classe est hétérogène : il comprend des élèves à haut potentiel, d’autres en difficulté
+                        de compréhension ou présentant des troubles spécifiques (TDAH, dyspraxie), ainsi qu’un élève
+                        allophone. Une différenciation des parcours est donc nécessaire pour favoriser l’appropriation
+                        des savoirs par tous.</p>
+                </div>
+
+                <div class="section-block">
+                    <h3 class="text-xl font-semibold">Compétences ciblées</h3>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li>Expliquer les différents états de la matière en termes de structure et de comportement des
+                            particules.</li>
+                        <li>Utiliser un modèle pour interpréter les changements d’état.</li>
+                        <li>Observer, formuler des hypothèses, expérimenter et modéliser un phénomène.</li>
+                        <li>Mobiliser des outils numériques pour comprendre un concept scientifique abstrait.</li>
+                    </ul>
+                </div>
+
+                <div class="section-block">
+                    <h3 class="text-xl font-semibold">Outils numériques mobilisés</h3>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li><strong>PhET Interactive Simulations</strong> : pour manipuler virtuellement des particules
+                            de matière dans différents états et observer l'effet de la température ou de la pression.
+                        </li>
+                        <li><strong>Khan Academy (avec IA intégrée)</strong> : pour différencier les exercices selon les
+                            résultats aux questions initiales et proposer des parcours adaptatifs.</li>
+                        <li><strong>Socrat.ai</strong> : chatbot d’assistance pédagogique en ligne pour répondre aux
+                            questions en autonomie.</li>
+                        <li><strong>Merge Cube (ou MEL Science)</strong> : pour permettre une visualisation tangible et
+                            immersive des structures moléculaires en 3D grâce à la réalité augmentée.</li>
+                    </ul>
+                </div>
+
+                <div class="section-block">
+                    <h3 class="text-xl font-semibold">Déroulement de la séquence</h3>
+                    <ol class="list-decimal list-inside space-y-3">
+                        <li>
+                            <strong>Introduction active (10 min)</strong>
+                            <p>Lancement par une situation-problème : « Pourquoi la glace fond-elle plus vite sur une
+                                plaque en métal que sur une planche en bois ? ». Discussion orale guidée, hypothèses des
+                                élèves, puis transition vers le besoin d’un modèle invisible pour comprendre ces
+                                phénomènes.</p>
+                        </li>
+                        <li>
+                            <strong>Expérimentation concrète (15 min)</strong>
+                            <p>Manipulation de glaçons dans différents contextes (eau chaude, air ambiant, plaque
+                                froide). Observation des états physiques et des changements.</p>
+                        </li>
+                        <li>
+                            <strong>Modélisation scientifique (20 min)</strong>
+                            <p>Utilisation d’une simulation PhET en grand groupe : les élèves observent le comportement
+                                des particules dans les 3 états et les transitions. Discussion collective, prise de
+                                notes, verbalisation progressive du modèle scientifique.</p>
+                        </li>
+                        <li>
+                            <strong>Travail différencié (25 min)</strong>
+                            <p>Activité en autonomie sur tablette avec <em>Khan Academy</em>. L’outil propose un
+                                parcours adapté au niveau de l’élève, en fonction de ses réponses aux premières
+                                questions. Les élèves en difficulté reçoivent davantage d’exercices visuels et
+                                interactifs. Les plus avancés travaillent sur des exercices d’approfondissement, avec
+                                schématisation.</p>
+                        </li>
+                        <li>
+                            <strong>Soutien et accompagnement (10 min)</strong>
+                            <p>Les élèves peuvent solliciter <em>Socrat.ai</em> via une interface simple : le chatbot
+                                répond à leurs interrogations sur les notions vues. Cela encourage l’autonomie et le
+                                réinvestissement immédiat des concepts.</p>
+                        </li>
+                        <li>
+                            <strong>Remédiation augmentée (15 min)</strong>
+                            <p>Pour les élèves qui peinent encore, une séance avec le <em>Merge Cube</em> est proposée.
+                                Ils peuvent manipuler un modèle moléculaire virtuel, en 3D, avec leur téléphone. Cela
+                                permet d’ancrer les concepts abstraits dans une expérience sensorielle immersive.</p>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="section-block">
+                    <h3 class="text-xl font-semibold">Évaluation</h3>
+                    <p>L’évaluation est continue, avec une attention portée sur l’évolution des représentations mentales
+                        des élèves. Un QCM différencié est proposé à la fin de la séquence, accompagné d’un schéma à
+                        compléter. L’élève doit justifier son choix de modèle moléculaire pour représenter une situation
+                        donnée. Une autoévaluation permet aussi aux élèves de verbaliser leur compréhension et leurs
+                        stratégies utilisées.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="ressources" class="tab-content" data-aos="fade-up">
+            <h2 class="text-3xl font-semibold mb-4">Ressources</h2>
+            <div class="bg-white p-6 rounded-xl shadow-sm space-y-6 text-gray-800 text-sm leading-relaxed">
+
+                <div class="section-block">
+                    <h3 class="text-lg font-semibold text-primary">PhET Interactive Simulations</h3>
+                    <p>Développé par l’Université du Colorado, cet outil gratuit propose des simulations interactives en
+                        physique, chimie, biologie et mathématiques. En visualisant en temps réel les effets d’un
+                        changement de température ou de pression sur des particules, les élèves accèdent à une
+                        compréhension plus intuitive des phénomènes. <br><a href="https://phet.colorado.edu"
+                            class="text-blue-600 underline" target="_blank">Accéder à PhET</a></p>
+                </div>
+
+                <div class="section-block">
+                    <h3 class="text-lg font-semibold text-primary">Khan Academy (et IA intégrée)</h3>
+                    <p>Plateforme d’apprentissage reconnue, elle permet à chaque élève d’avancer à son rythme grâce à
+                        des vidéos, des quiz, et des exercices adaptatifs. La version expérimentale intégrant l’IA
+                        propose des recommandations personnalisées selon les résultats obtenus. <br><a
+                            href="https://www.khanacademy.org" class="text-blue-600 underline" target="_blank">Accéder à
+                            Khan Academy</a></p>
+                </div>
+
+                <div class="section-block">
+                    <h3 class="text-lg font-semibold text-primary">Socrat.ai</h3>
+                    <p>Ce chatbot éducatif permet aux élèves de poser des questions en langage naturel et d’obtenir des
+                        réponses contextualisées sur des notions scientifiques. Il favorise l’autonomie et le
+                        réinvestissement immédiat des apprentissages. <br><a href="https://socrat.ai"
+                            class="text-blue-600 underline" target="_blank">Accéder à Socrat.ai</a></p>
+                </div>
+
+                <div class="section-block">
+                    <h3 class="text-lg font-semibold text-primary">Merge Cube</h3>
+                    <p>Dispositif de réalité augmentée, il permet aux élèves de manipuler des objets scientifiques
+                        (molécules, systèmes solaires, cellules) en 3D avec leurs mains. Il favorise une approche
+                        multisensorielle idéale pour les élèves ayant besoin d’un support concret pour comprendre
+                        l’abstraction. <br><a href="https://mergeedu.com/cube" class="text-blue-600 underline"
+                            target="_blank">Accéder à Merge Cube</a></p>
+                </div>
+
+                <div class="section-block">
+                    <h3 class="text-lg font-semibold text-primary">MEL Science</h3>
+                    <p>Propose des kits d’expérimentation scientifique à domicile ou en classe, complétés par des
+                        visualisations en réalité augmentée et virtuelle. Idéal pour faire le lien entre observation
+                        concrète et modélisation scientifique. <br><a href="https://melscience.com"
+                            class="text-blue-600 underline" target="_blank">Accéder à MEL Science</a></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="biblio" class="tab-content" data-aos="fade-up">
+            <h2 class="text-3xl font-semibold mb-4">Bibliographie</h2>
+            <div class="bg-white p-6 rounded-xl shadow-sm text-sm space-y-4 text-gray-800 leading-relaxed">
+                <ul class="list-disc list-inside space-y-2">
+                    <li><strong>Canonigo, A. M.</strong> (2024). <em>Leveraging AI to enhance students' conceptual
+                            understanding</em>. Journal of Educational Technology, 19(2).</li>
+
+                    <li><strong>Duroisin, N., & Malaise, S.</strong> (2015). <em>Mise à l’épreuve de situations
+                            scolaires visant à développer le processus d’abstraction chez les élèves de 8 à 14 ans</em>.
+                        <em>Traces de changements</em>, 10(1), 91–110.
+                    </li>
+
+                    <li><strong>Heeg, D. M., & Avraamidou, L.</strong> (2023). <em>The use of artificial intelligence in
+                            school science: A systematic literature review</em>. <em>Educational Media
+                            International</em>, 60(2), 125–150. <br><a
+                            href="https://doi.org/10.1080/09523987.2023.2186234" class="text-blue-600 underline"
+                            target="_blank">https://doi.org/10.1080/09523987.2023.2186234</a></li>
+
+                    <li><strong>Goldin, A. P., Pedroncini, O., & Sigman, M.</strong> (2017). <em>Socratic dialog is very
+                            effective, but only for a few</em>. <em>PLoS ONE</em>, 12(3), e0174352. <br><a
+                            href="https://doi.org/10.1371/journal.pone.0174352" class="text-blue-600 underline"
+                            target="_blank">https://doi.org/10.1371/journal.pone.0174352</a></li>
+
+                    <li><strong>Cowin, J. B.</strong> (2020). <em>Digital Worlds and Transformative Learning</em>.
+                        <em>International Journal of Innovation, Creativity and Change</em>, 12(8).
+                    </li>
+
+                    <li><strong>Perkins, K., Adams, W., Dubson, M., et al.</strong> (2006). <em>PhET: Interactive
+                            simulations for teaching and learning physics</em>. <em>The Physics Teacher</em>, 44(1),
+                        18–23. <br><a href="https://doi.org/10.1119/1.2150754" class="text-blue-600 underline"
+                            target="_blank">https://doi.org/10.1119/1.2150754</a></li>
+
+                    <li><strong>Skayem, H.</strong> (2024). <em>Outils d’intelligence artificielle pour faciliter
+                            l’enseignement</em>. <em>Espacefrancais.com</em>. <br><a
+                            href="https://www.espacefrancais.com/intelligence-artificielle-et-enseignement/"
+                            class="text-blue-600 underline"
+                            target="_blank">https://www.espacefrancais.com/intelligence-artificielle-et-enseignement/</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        AOS.init();
+        function showTab(id) {
+            document.querySelectorAll('.tab-content').forEach(e => e.classList.remove('active'))
+            const el = document.getElementById(id);
+            if (el) el.classList.add('active')
+            window.scrollTo({ top: 0, behavior: 'smooth' })
+        }
+    </script>
+</body>
+
+</html>
